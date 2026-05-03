@@ -1,0 +1,21 @@
+POST http://localhost:5000/api/connect
+Content-Type: application/json
+
+{
+  "deviceId": 0
+}
+
+###
+# curl -X POST http://raspberrypi.local:5000/api/control 
+#  -H "Content-Type: application/json" 
+#  -d '{"deviceId": 0, "channel": "A", "power": 0.5}'
+POST http://localhost:5000/api/control
+Content-Type: application/json
+
+{
+  "deviceId": 0,
+  "channel": "A",
+  "power": 0.0
+}
+
+###
