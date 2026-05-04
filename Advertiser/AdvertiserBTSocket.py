@@ -188,7 +188,10 @@ class AdvertiserBTSocket(Advertiser) :
 
                 advertisementCommand = AdvertiserBTSocket._create_add_advert_command(
                     instance_id=1,
-                    flags=AdvertiserBTSocket.Flags.GENERAL_DISCOVERABLE,
+                    flags=(
+                            AdvertiserBTSocket.Flags.CONNECTABLE
+                            | AdvertiserBTSocket.Flags.GENERAL_DISCOVERABLE
+                    ),
                     duration=0x00,  # zero means use default
                     timeout=0x00,  # zero means use default
                     #adv_data='1bfff0ff6DB643CF7E8F471188665938D17AAA26495E131415161718',
